@@ -23,12 +23,21 @@ final class XCC_Jamf_TestUITests: XCTestCase {
     }
 
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testButton() throws {
+        // Given the app has been launched
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        
+        // And the text in the app reads "Hello World!"
+        XCTAssertEqual(app.windows.firstMatch.staticTexts["text"].value as! String, "Hello World!")
+        
+        // When a user clicks the "Click me!" button
+        app.windows.firstMatch.buttons["button"].click()
+        
+        // Then the text displayed in the window should change from "Hello World!" to "Button was clicked."
+        XCTAssertEqual(app.windows.firstMatch.staticTexts["text"].value as! String, "Button was clicked.")
     }
 
     @MainActor

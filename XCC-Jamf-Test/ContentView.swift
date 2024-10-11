@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text: String = "Hello World!"
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(text)
+                .accessibilityIdentifier("text")
+            Button(action: changeText, label: { Text("Click me!") })
+                .accessibilityIdentifier("button")
         }
         .padding()
+        .frame(minWidth: 200)
+    }
+
+    
+    func changeText() {
+        text = "Button was clicked."
     }
 }
+
+
 
 #Preview {
     ContentView()
