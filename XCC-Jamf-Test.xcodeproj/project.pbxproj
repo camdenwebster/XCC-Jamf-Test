@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5050A6542CB9BFB300E43E58 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 5050A6532CB9BFB300E43E58 /* SnapshotTesting */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		507F87CE2CB9B15400D47085 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5050A6542CB9BFB300E43E58 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +163,7 @@
 			);
 			name = "XCC-Jamf-TestUITests";
 			packageProductDependencies = (
+				5050A6532CB9BFB300E43E58 /* SnapshotTesting */,
 			);
 			productName = "XCC-Jamf-TestUITests";
 			productReference = 507F87D72CB9B15400D47085 /* XCC-Jamf-TestUITests.xctest */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 507F87B32CB9B15200D47085;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5050A6522CB9BFB300E43E58 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 507F87BD2CB9B15200D47085 /* Products */;
 			projectDirPath = "";
@@ -553,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5050A6522CB9BFB300E43E58 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5050A6532CB9BFB300E43E58 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5050A6522CB9BFB300E43E58 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 507F87B42CB9B15200D47085 /* Project object */;
 }
